@@ -55,14 +55,36 @@ class BinarySearchTree:
                 temp = temp.right              
             
 
+    def contains(self,value):
+        #if self.root is None:
+        #    return False     This line is not necessary
+
+        temp = self.root   
+
+        while temp is not None:
+            if value < temp.value:
+                temp = temp.left
+            elif value > temp.value:
+                temp = temp.right
+            else:
+                return True 
+
+        return False               
+
 
 tree1 = BinarySearchTree()
-tree1.insert(2)
-tree1.insert(1)
-tree1.insert(3)
+tree1.insert(30)
+tree1.insert(25)
+tree1.insert(45)
+tree1.insert(24)
+tree1.insert(100)
+tree1.insert(11)
+tree1.insert(5)
 
-print(tree1.root.value)
-print(tree1.root.left.value)
-print(tree1.root.right.value)
+
+# print(tree1.root.value)
+# print(tree1.root.left.value)
+# print(tree1.root.right.value)
+print(tree1.contains(5))
 
 
