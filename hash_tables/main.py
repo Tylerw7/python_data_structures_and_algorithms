@@ -29,7 +29,16 @@ class HashTable:
             for i in range(len(self.data_map[index])):
                 if self.data_map[index][i][0] == key:
                     return self.data_map[index][i][1]
-        return None        
+        return None  
+        
+
+    def keys(self):
+        all_keys = []
+        for i in range(len(self.data_map)):
+            if self.data_map[i] is not None:
+                for j in range(len(self.data_map[i])):
+                    all_keys.append(self.data_map[i][j][0])
+        return all_keys            
 
 
 
@@ -45,5 +54,6 @@ table.set_item('washers', 50)
 table.set_item('lumber', 70) 
 table.set_item('tyler', 33) 
 table.print_table() 
-print(table.get_item('tyler'))
+
+print(table.keys())
 
