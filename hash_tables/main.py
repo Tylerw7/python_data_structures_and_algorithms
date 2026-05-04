@@ -53,7 +53,7 @@ table.set_item('bolts', 1400)
 table.set_item('washers', 50)
 table.set_item('lumber', 70) 
 table.set_item('tyler', 33) 
-table.print_table() 
+table.print_table()  
 
 print(table.keys())
 
