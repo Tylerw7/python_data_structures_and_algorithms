@@ -53,7 +53,9 @@ table.set_item('bolts', 1400)
 table.set_item('washers', 50)
 table.set_item('lumber', 70) 
 table.set_item('tyler', 33) 
+table.set_item('Precious', 30)
 table.print_table()  
 
 print(table.keys())
+print(table.get_item('Precious'))
 
